@@ -1,0 +1,61 @@
+include ./mixins.pug
+
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title Космические истории | Space tales
+  body
+    .wrapper
+      .maincontent
+        header.header
+          .container
+            +navigation('header')
+            .hamburger-wrap
+              button#humburger(type='button').humburger__btn.hamburger--collapse
+                span.hamburger-box
+                  span.hamburger-inner
+              .logo Sun<span>Moon</span>
+        section#space-objects.space-objects
+          .container.container--space-objects
+            h1.space-objects__title.text-title Луна или солнце?
+            .space-objects__list-wrap
+              ul.space-objects__list
+                li.space-objects__item.active
+                  .space-objects__img
+                    +image('content/sun.jpg', 'space-objects__pic', 'Фотография солнца 9 апреля 2013')
+                  article.space-objects__text Солнце — ближайшая к Земле звезда. Солнце находится на расстоянии около 26 000 световых лет от центра Млечного Пути и вращается вокруг него, делая один оборот за 225—250 миллионов лет. 
+                li.space-objects__item
+                  .space-objects__img
+                    +image('content/moon.jpg', 'space-objects__pic', 'Фотография луны 22 октября 2010')
+                  article.space-objects__text Атмосфера практически отсутствует. Поверхность Луны покрыта реголитом — смесью тонкой пыли и скалистых обломков, образующихся в результате столкновений метеоритов с лунной поверхностью. 
+              .space-objects__controls
+                button.space-objects__controls-btn.prev <
+                button.space-objects__controls-btn.next >
+
+        section#eclipse.eclipse
+          .container.container--eclipse
+            h2.eclipse__title.text-title  Когда будет солнечное затмение?
+            .eclipse__info
+              .eclipse__image
+                +image('content/eclipse.jpg', 'eclipse__pic', 'Солнечное затмение 11 августа 1999')
+              article.eclipse__text Со́лнечное затме́ние — астрономическое явление, которое заключается в том, что Луна закрывает (затмевает) полностью или частично Солнце от наблюдателя на Земле. Солнечное затмение возможно только в новолуние, когда сторона Луны, обращённая к Земле, не освещена, и сама Луна не видна. Затмения возможны, только если новолуние происходит вблизи одного из двух лунных узлов (точки пересечения видимых орбит Луны и Солнца), не далее, чем примерно в 12 градусах от одного из них.
+            #form-component
+              include ./components/form.pug  
+
+        section#travel.travel
+          .container.container--travel
+            h2.travel__title.text-title Полетим?
+            .travel__content
+              .travel__image
+                +image('content/travel.jpg', 'travel__pic', 'Наш шатл в космическом пространстве')
+              article.travel__text В настоящее время единственной используемой с целью космического туризма является Международная космическая станция (МКС). Полёты осуществляются при помощи российских космических кораблей «Союз» на российский сегмент МКС.
+        footer.footer
+          .container
+            +navigation('footer')
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-compat/3.0.0-alpha1/jquery.min.js")
+
+
+

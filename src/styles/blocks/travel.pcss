@@ -1,0 +1,31 @@
+.travel {
+  position: relative;
+  left: -200%;
+  margin-bottom: 40px;
+  transition: left 0.3s;
+
+  &.active {
+    left: 0;
+    transition: left 0.5s;
+  }
+}
+.container--travel {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.travel__title.text-title {
+  margin-bottom: 40px;
+}
+
+.travel__content {
+  width: 70%;
+
+  @include phones {
+    width: 100%;
+  }
+}
+.travel__image {
+  margin-bottom: 20px;
+}

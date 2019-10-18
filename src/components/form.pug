@@ -1,0 +1,18 @@
+script(type="text/x-template")#form-container
+  form.eclipse__submit
+    label.eclipse__submit-label(
+      :class="{disabled : displayThanks === true}"
+    )
+      h3.eclipse__submit-title Введите Ваш email и мы будем оповещать Вас о предстоящих солнечных затмениях:
+      input(type="email" class="eclipse__submit-input" placeholder="ваш@email" name="email" required)
+    .eclipse__submit-btn(
+      :class="{disabled : displayThanks === true}"
+
+    )  
+      button(
+        @click.prevent="isThanks"
+        type="submit"
+      ).eclipse__submit-button Подпиаться
+    .eclipse__thanks(
+      :class="{active : displayThanks === true}"
+    ) Спасибо за подписку!

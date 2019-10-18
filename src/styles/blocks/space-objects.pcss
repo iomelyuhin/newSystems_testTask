@@ -1,0 +1,97 @@
+.space-objects {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+
+  @include tablets {
+    height: 40vh;  
+  }
+
+  @include phones {
+    height: 55vh;  
+  }
+  
+  @include phones-mini {
+    height: 70vh;
+  }
+}
+
+.container--space-objects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.space-objects__title {
+  margin-bottom: 40px;
+}
+
+.space-objects__list-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.space-objects__list {
+  display: flex;
+  position: absolute;
+  left: 0;
+  width: 200%;
+}
+
+.space-objects__item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.space-objects__img {
+  /* height: 60%; */
+  width: 70%;
+  margin-bottom: 10px;
+
+  @include phones {
+    width: 100%;  
+  }
+}
+.space-objects__text {
+  width: 70%;
+  @include phones {
+    width: 100%;  
+  }
+}
+
+.space-objects__controls {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @include phones {
+  top: 0;
+  transform: translateY(0);
+  }
+}
+.space-objects__controls-btn {
+  background-color: $bg-dark-section;
+  color: $text-color-light;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 0;
+  font-weight: 900;
+    
+  &:hover {
+    background-color: $bg-dark;
+    transition: background-color 0.3s;
+  }
+
+  @include phones {
+    margin: 0 -15px;
+  }
+}

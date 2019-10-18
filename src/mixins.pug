@@ -1,0 +1,17 @@
+mixin icon(name, className)
+  - var icon = require(`images/icons/${name}.svg`);
+  svg(class=className viewBox=icon.viewBox preserveAspectRatio="none")
+    use(xlink:href=icon.url)
+
+mixin image(path, className, alt)
+  img(src=require(`images/${path}`) class=className alt=alt)
+
+mixin navigation(mod)
+  nav(class=`navigation navigation--${mod}`)
+    ul.navigation__list 
+      li.navigation__item
+        a.navigation__link(href="#space-objects") Луна или солнце?
+      li.navigation__item
+        a.navigation__link(href="#eclipse") Когда затмение?
+      li.navigation__item
+        a.navigation__link(href="#travel") Полетим?

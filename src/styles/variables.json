@@ -1,0 +1,13 @@
+{
+  "btn-hover": "#d965c1",
+  "btn": "#a74b94",
+  "bg-dark-section": "#4c2b64",
+  "bg-dark": "#0f0d3e",
+  "text-color-light": "#d8d5f4",
+  "text-color": "#1c0e28",
+  "bp-desktop-hd": "1800px",
+  "bp-desktop": "1200px",
+  "bp-tablets": "768px",
+  "bp-phones": "480px",
+  "bp-phones-mini": "320px"
+}
