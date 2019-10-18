@@ -1,18 +1,18 @@
 .space-objects {
-  height: 80vh;
+  /* height: 80vh; */
   width: 100%;
   display: flex;
 
   @include tablets {
-    height: 40vh;  
+    /* height: 40vh;   */
   }
 
   @include phones {
-    height: 55vh;  
+    /* height: 55vh;   */
   }
   
   @include phones-mini {
-    height: 70vh;
+    /* height: 70vh; */
   }
 }
 
@@ -33,10 +33,11 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  margin-bottom: 40px;
 }
 .space-objects__list {
   display: flex;
-  position: absolute;
+  position: relative;
   left: 0;
   width: 200%;
 }
@@ -49,12 +50,12 @@
 }
 
 .space-objects__img {
-  /* height: 60%; */
   width: 70%;
   margin-bottom: 10px;
 
   @include phones {
     width: 100%;  
+    margin-bottom: 30px;  
   }
 }
 .space-objects__text {
@@ -65,16 +66,17 @@
 }
 
 .space-objects__controls {
-  width: 100%;
+  width: 86%;
   position: absolute;
   display: flex;
   justify-content: space-between;
   top: 50%;
+  left: 15%;
   transform: translateY(-50%);
+  transform: translateX(-10%);
 
   @include phones {
-  top: 0;
-  transform: translateY(0);
+  top: 57%;
   }
 }
 .space-objects__controls-btn {
