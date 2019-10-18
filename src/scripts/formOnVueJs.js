@@ -10,8 +10,6 @@ new Vue({
   methods: {
     isThanks() {
       this.displayThanks = true;
-      console.log(this.displayThanks);
-
     }
   }
 });

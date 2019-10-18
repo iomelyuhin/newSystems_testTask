@@ -1,7 +1,6 @@
 window.addEventListener('scroll', function () {
   let container = document.querySelector(".travel");
   let devieHeight = window.innerHeight;
-  console.log(window.innerHeight);
 
 
   if (devieHeight < 1000) {
